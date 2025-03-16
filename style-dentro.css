@@ -1,0 +1,531 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.slider-container{
+    position:relative;
+    height:100%;
+    width:100%;
+    overflow:hidden;
+}
+
+
+
+.logo {
+    width: 20px;
+    height: 20px;
+    background-color: black; /* Cambia el color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Oculta los slides al inicio */
+.slider-wrapper .slider-item-masajes {
+    transform: scale(0.95) translateY(20px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Muestra los slides después de la carga */
+body.loaded .slider-wrapper .slider-item-masajes {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.slider-wrapper .slider-item-masajes{
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+
+}
+
+
+.slider-wrapper .slider-item-masajes::before{
+    position:absolute;
+    content:"";
+    left:0;
+    top:0;
+    width: 100%;
+    height:100%;
+    filter:grayscale(20%);
+    background-color: #f3accb;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.slider-wrapper .slider-item-masajes:nth-child(2):before{
+    background-color: #eb9ac0;
+}
+
+.slider-wrapper .slider-item-masajes:nth-child(3):before{
+    background-color: #db8fc5;
+}
+
+
+
+
+.slider-wrapper .slider-item-masajes .slide-content{
+    opacity: 0;
+    color: black;
+    z-index:20;
+    position:relative;
+    margin: 0 auto;
+    padding:0 20px 10px;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.slider-item-masajes.swiper-slide-active .slide-content{
+    animation: animate_opacity 0.8s 0.6s linear forwards;
+}
+
+@keyframes animate_opacity{
+    100%{
+        opacity:1;
+    }
+}
+
+
+.slider-wrapper .slider-item-masajes .slide-content > *{
+    max-width: 35%;
+}
+
+.slider-item-masajes .slide-content .slide-subtitle{
+    font-size: 1rem;
+    font-weight: normal;
+    opacity:0;
+    transform:translateY(60%);
+}
+
+.slider-wrapper .slider-item-masajes .slide-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top:5px;
+    text-transform: uppercase;
+    opacity:0;
+    transform:translateY(60%);
+}
+
+.slider-item-masajes.swiper-slide-active :where(.slide-subtitle, .slide-title){
+    animation: animate_text 0.6s 0.6s linear forwards;
+}
+
+@keyframes animate_text{
+    100%{
+        opacity:1;
+        transform:translateY(0%);
+    }
+}
+
+
+
+
+
+.slider-item-masajes .slide-content .slide-description{
+    margin-top:25px;
+    line-height:25px;
+    opacity:0;
+    transform:translateY(60%);
+}
+
+.slider-item-masajes.swiper-slide-active .slide-description{
+    animation: animate_text 0.6s 1s linear forwards;
+}
+
+
+.slider-wrapper .slider-item-masajes .slide-button{
+    color:black;
+    display:block;
+    opacity:0;
+    width: 0;
+    padding: 13px 0;
+    position:absolute;
+    top:380px;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap;
+    font-size:0.8rem;
+    font-weight:600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border:2px solid black;
+    transition: 0.5s ease;
+}
+
+.slider-wrapper .slider-item-masajes .slide-button span{
+    opacity:0;
+}
+
+.slider-item-masajes.swiper-slide-active .slide-button span{
+    animation: animate_opacity 0.6s 1.5s linear forwards;
+}
+
+.slider-item-masajes.swiper-slide-active .slide-button{
+    animation: animate_button 0.6s 1.3s linear forwards;
+}
+
+@keyframes animate_button{
+    100%{
+        opacity:1;
+        width: 250px;
+    }
+}
+
+.slider-wrapper .slider-item-masajes .slide-button:hover{
+    color:white;
+    background:black;
+}
+
+
+.slider-container .slider-controls {
+    position: absolute;
+    z-index: 20;
+    bottom: 85px; /* Cambiado de 145px a 10px */
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.slider-controls .slider-pagination {
+    position:relative;
+    display:flex;
+    margin: 0 auto;
+    padding:0 20px;
+    max-width: 1400px;
+    list-style:none;
+    justify-content: space-between;
+}
+
+.slider-pagination .slider-indicator{
+    position:absolute;
+    bottom:0;
+    width:300px;
+    border-bottom:2px solid black;
+    transition:0.4s ease-in-out;
+}
+
+
+
+.slider-pagination .slider-tab{
+    color:black;
+    text-align: center;
+    cursor:pointer;
+    font-size:0.85rem;
+    padding:20px 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+   
+}
+
+
+.slider-navigations button{
+    position:absolute;
+    top:50%;
+    z-index: 20;
+    height:40px;
+    width:40px;
+    border:none;
+    cursor:pointer;
+    color:black;
+    background:white;
+    transform:translateY(-395%);
+    transition:0.4s ease;
+}
+
+.slider-navigations button.swiper-button-disabled{
+    display:none;
+}
+
+.slider-navigations button:hover{
+    background: black;
+    color:white;
+}
+
+.slider-navigations button#slide-prev{
+    left:20px;
+}
+
+
+.slider-navigations button#slide-next{
+    right:20px;
+}
+
+
+.contenedor {
+    position: relative;  /* Necesario para que .imagen5 se posicione respecto a este */
+    height: 300px; /* Ajusta la altura según necesites */
+}
+
+.imagen1{
+    position:fixed;
+    left:20px;
+    top:0;
+}
+.imagen2 {
+    position: fixed;
+    left: 500px;
+    top: 0px; /* Se posiciona justo debajo de la imagen1 */
+}
+.imagen3{
+    position:fixed;
+    left: 500px;
+    top: 170px;
+}
+.imagen4{
+    position:fixed;
+    left:980px;
+    top:0px;
+}
+.imagen5{
+    position:fixed;
+    left:740px;
+    top: 170px;
+}
+
+
+.imagen6{
+    position:fixed;
+    left:260px;
+    top:0;
+}
+.imagen7{
+    position:fixed;
+    left:20px;
+    top: 170px;
+}
+.imagen8{
+    position:fixed;
+    left:740px;
+    top:0px;
+}
+.imagen9{
+    position:fixed;
+    left:260px;
+    top: 170px;
+}
+
+
+
+
+@media (max-width:1536px){
+    .slider-wrapper .slider-item-masajes .slide-content,
+    .slider-controls .slider-pagination{
+        width:85%;
+    }
+    .contenedor {
+        position: relative;  /* Necesario para que .imagen5 se posicione respecto a este */
+        height: 300px; /* Ajusta la altura según necesites */
+    }
+    
+    .imagen1{
+        position:fixed;
+        left:20px;
+        top:0;
+    }
+    .imagen2 {
+        position: fixed;
+        left: 500px;
+        top: 0px; /* Se posiciona justo debajo de la imagen1 */
+    }
+    .imagen3{
+        position:fixed;
+        left: 500px;
+        top: 170px;
+    }
+    .imagen4{
+        position:fixed;
+        left:20px;
+        top:340px;
+    }
+    .imagen5{
+        position:fixed;
+        left:260px;
+        top: 340px;
+    }
+    
+    
+    .imagen6{
+        position:fixed;
+        left:260px;
+        top:0;
+    }
+    .imagen7{
+        position:fixed;
+        left:20px;
+        top: 170px;
+    }
+    .imagen8{
+        position:fixed;
+        left:500px;
+        top:340px;
+    }
+    .imagen9{
+        position:fixed;
+        left:260px;
+        top: 170px;
+    }
+    
+}
+
+
+
+@media (max-width:768px){
+    .slider-wrapper .slider-item-masajes .slide-content > *{
+        max-width: 100%;
+    }
+    .contenedor {
+        position: relative;  /* Necesario para que .imagen5 se posicione respecto a este */
+        height: 300px; /* Ajusta la altura según necesites */
+    }
+    
+    .imagen1{
+        position:fixed;
+        width: 120px;
+        left:20px;
+        top:20px;
+    }
+    .imagen2 {
+        position: fixed;
+        width: 120px;
+        left: 20px;
+        top: 140px; /* Se posiciona justo debajo de la imagen1 */
+    }
+    .imagen3{
+        position:fixed;
+        width: 120px;
+        left:20px;
+        top:260px;
+    }
+    .imagen4{
+        position:fixed;
+        width: 120px;
+        left:20px;
+        top:380px;
+    }
+    .imagen5{
+        position:fixed;
+        width: 120px;
+        left:80px;
+        top:500px;
+    }
+    
+    
+    .imagen6{
+        position:fixed;
+        width: 120px;
+        left:220px;
+        top:20px;
+    }
+    .imagen7{
+        position:fixed;
+        width: 120px;
+        left:220px;
+        top: 140px;
+    }
+    .imagen8{
+        position:fixed;
+        width: 120px;
+        left:220px;
+        top:260px;
+    }
+    .imagen9{
+        position:fixed;
+        width: 120px;
+        left:220px;
+        top:380px;
+    }
+
+}
+
+
+@media (max-width:400px){
+    .contenedor {
+        position: relative;  /* Necesario para que .imagen5 se posicione respecto a este */
+        height: 300px; /* Ajusta la altura según necesites */
+    }
+    
+    .imagen1{
+        position:fixed;
+        width: 120px;
+        left:20px;
+        top:20px;
+    }
+    .imagen2 {
+        position: fixed;
+        width: 120px;
+        left: 20px;
+        top: 140px; /* Se posiciona justo debajo de la imagen1 */
+    }
+    .imagen3{
+        position:fixed;
+        width: 120px;
+        left:20px;
+        top:260px;
+    }
+    .imagen4{
+        position:fixed;
+        width: 120px;
+        left:20px;
+        top:380px;
+    }
+    .imagen5{
+        position:fixed;
+        width: 120px;
+        left:20px;
+        top:500px;
+    }
+    
+    
+    .imagen6{
+        position:fixed;
+        width: 120px;
+        left:220px;
+        top:20px;
+    }
+    .imagen7{
+        position:fixed;
+        width: 120px;
+        left:220px;
+        top: 140px;
+    }
+    .imagen8{
+        position:fixed;
+        width: 120px;
+        left:220px;
+        top:260px;
+    }
+    .imagen9{
+        position:fixed;
+        width: 120px;
+        left:220px;
+        top:380px;
+    }
+
+    .slider-item-masajes .slide-content .slide-description {
+        font-size: 15px;
+        line-height:15px;
+    }
+
+}
+
+
+
+
+

@@ -1,0 +1,2998 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.title-diapo6{
+    color:white;
+}
+
+.contenedor-diapo6 {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Opcional, centra verticalmente si es necesario */
+    height: 100vh; /* Ajusta la altura si quieres centrar en toda la pantalla */
+}
+
+
+.efectivo {
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Hace que tenga bordes redondeados */
+    border: 2px solid white; /* Borde del círculo */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.tarjetas {
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Hace que tenga bordes redondeados */
+    border: 2px solid white; /* Borde del círculo */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.transferencia {
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Hace que tenga bordes redondeados */
+    border: 2px solid white; /* Borde del círculo */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+
+
+.contenedor1-diapo5{
+    position:absolute;
+    width:200px;
+    top:-300px;
+}
+
+.slider-container{
+    position:relative;
+    height:100%;
+    width:100%;
+    overflow:hidden;
+}
+
+.slide-todas-edades{
+    position:fixed;
+    text-align: center;
+    left:50%;
+    top:230px;
+    transform: translateX(-50%);
+    color:black;
+}
+
+
+/* Oculta los slides al inicio */
+.slider-wrapper .slider-item {
+    transform: scale(0.95) translateY(20px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.first-word {
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.first-word-diapo2 {
+    font-size: 1.3rem;
+    font-family: ivypresto-text, serif;
+    font-style: normal;
+    font-weight: 2000;
+    text-transform: uppercase;
+}
+
+
+.logo {
+    width: 20px;
+    height: 20px;
+    background-color: black; /* Cambia el color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* ARREGLAR POR FAVOR */
+.slide-title-diapo3-2{
+    position:absolute;
+    top:-170px;
+    color: white;
+}
+
+.slider-container.white-indicator .slider-tab .logo {
+    width: 20px;
+    height: 20px;
+    background-color: white; /* Cambia el color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* Muestra los slides después de la carga */
+body.loaded .slider-wrapper .slider-item {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.slider-wrapper .slider-item{
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+
+}
+
+.slider-wrapper .slider-item::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(20%);
+    background-image: url(images/rosas.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.slider-wrapper .slider-item:nth-child(2):before{
+    background-image:url("images/fondo\ rojo.webp");
+}
+
+.slider-wrapper .slider-item:nth-child(3):before{
+    background-color:#ff8fab;
+    background-image:none;
+}
+
+.slider-wrapper .slider-item:nth-child(4):before{
+    background-color:black;
+    background-image:none;
+}
+
+.slider-wrapper .slider-item:nth-child(5):before{
+    background-color: black;
+    background-image:none;
+}
+
+.slider-wrapper .slider-item:nth-child(6):before{
+    background-color: black;
+    background-image:none;
+}
+
+
+
+
+.slider-wrapper .slider-item .slide-content{
+    opacity: 0;
+    color: black;
+    z-index:20;
+    position:relative;
+    margin: 0 auto;
+    padding:0 20px 10px;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.slider-item.swiper-slide-active .slide-content{
+    animation: animate_opacity 0.8s 0.6s linear forwards;
+}
+
+@keyframes animate_opacity{
+    100%{
+        opacity:1;
+    }
+}
+
+
+
+
+
+.slide-title-diapo4{
+    position:absolute;
+    color:white;
+    top:-50px;
+}
+
+.slide-title-2-diapo4{
+    position:absolute;
+    color:white;
+    top:50px;
+}
+
+.slide-description-diapo4{
+    color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.slider-wrapper .slider-item .slide-content > *{
+    max-width: 35%;
+}
+
+.slider-item .slide-content .slide-subtitle{
+    position:absolute;
+    margin-top:-85px;
+    font-size: 1rem;
+    font-weight: normal;
+    opacity:0;
+    transform:translateY(60%);
+}
+
+.slider-item .slide-content .slide-subtitle-diapo3{
+    position:absolute;
+    top:-200px;
+    margin-top:-85px;
+    font-size: 1rem;
+    font-weight: normal;
+    opacity:0;
+    transform:translateY(60%);
+}
+
+
+
+.slider-wrapper .slider-item .slide-title{
+    position:absolute;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top:-45px;
+    opacity:0;
+    transform:translateY(60%);
+}
+
+.slider-wrapper .slider-item .slide-title-diapo3{
+    position:absolute;
+    color:white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top:-45px;
+    opacity:0;
+    transform:translateY(60%);
+}
+
+
+
+
+
+.slider-item.swiper-slide-active :where(.slide-subtitle, .slide-title){
+    animation: animate_text 0.6s 0.6s linear forwards;
+}
+
+.slider-item.swiper-slide-active :where(.slide-subtitle-diapo3, .slide-title-diapo3){
+    animation: animate_text 0.6s 0.6s linear forwards;
+}
+
+
+@keyframes animate_text{
+    100%{
+        opacity:1;
+        transform:translateY(0%);
+    }
+}
+
+
+
+.slider-item.swiper-slide-active :where(.slide-subtitle-opciones, .slide-title-opciones){
+    animation: animate_text 0.6s 0.6s linear forwards;
+}
+
+
+.slider-item.swiper-slide-active :where(.slide-subtitle-diapo5, .slide-title-diapo5){
+    animation: animate_text 0.6s 0.6s linear forwards;
+}
+
+
+.slide-title-diapo5{
+    color:white;
+}
+
+.slide-description-diapo5{
+    transform: translateY(510%);
+    color:white;
+}
+
+
+
+
+@keyframes animate_text{
+    100%{
+        opacity:1;
+        transform:translateY(0%);
+    }
+}
+
+
+
+
+.slider-container.white-indicator .slide-description{
+    color:white;
+}
+
+
+
+.slider-item .slide-content .slide-description {
+    margin-top: 25px;
+    line-height: 25px;
+    opacity: 0;
+    transform: translateY(60%);
+    width: 80%; /* Define un ancho fijo */
+    text-align: justify; /* Justifica el texto */
+}
+
+.slider-item .slide-content .slide-description-diapo3{
+    color:white;
+    position:absolute;
+    top:-200px;
+    margin-top:25px;
+    line-height:25px;
+    opacity:0;
+    transform:translateY(60%);
+}
+
+
+.slider-item.swiper-slide-active .slide-description{
+    animation: animate_text 0.6s 1s linear forwards;
+}
+
+.slider-item.swiper-slide-active .slide-description-diapo3{
+    animation: animate_text 0.6s 1s linear forwards;
+}
+
+
+.adaline-logo-fondo-blanco{
+    position:absolute;
+    transform: translateY(-170%) translateX(550%);
+    width:220px;
+}
+
+.adaline-logo-fondo-blanco-2 {
+    position: fixed;    /* Posiciona el elemento de forma fija en la ventana */
+   top: 10px;             /* Alinea al tope de la pantalla */
+    right: 10px;            /* Alinea al extremo derecho */
+    width: 90px;      /* Puedes mantener o ajustar el ancho deseado */
+    max-width: 100%;    /* Para que no sobrepase el ancho de la pantalla */
+    z-index: 1000;      /* Asegura que la imagen esté por encima de otros elementos */
+    transform: none;    /* Elimina transformaciones que alteren su posición */
+  }
+  
+  
+
+
+.slider-item .slide-content .slide-subdescription {
+    position: absolute;
+    margin-top: 125px;
+    line-height: 25px;
+    opacity: 0;
+    transform: translateY(60%);
+    top: 170px;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: none;
+}
+
+.slider-item.swiper-slide-active .slide-subdescription{
+    animation: animate_text 0.6s 1s linear forwards;
+}
+
+.slide-title,
+.slide-subtitle,
+.slide-subdescription {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    will-change: transform, opacity;
+}
+
+
+.slide-title-diapo3,
+.slide-subtitle-diapo3,
+.slide-subdescription {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    will-change: transform, opacity;
+}
+
+
+
+.contenedor-diapo2{
+    position:absolute;
+    top:-420px;
+    right:500px;
+}
+
+
+.slide-title-diapo2{
+    position:relative;
+    font-family: attribute-text, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    transform:translateY(560%);
+}
+
+.slider-item.swiper-slide-active :where(.slide-title-diapo2){
+    animation: animate_text 0.6s 0.6s linear forwards;
+}
+
+
+.adaline-blanco{
+    position:relative;
+    transform:translateY(560%);
+}
+
+.slider-item.swiper-slide-active :where(.adaline-blanco){
+    animation: animate_text 0.6s 1.2s linear forwards;
+}
+
+
+.imagen2{
+    position:absolute;
+    top:-180px;
+    right:-580px;
+}
+
+
+
+
+.slide-subtitle-depilacion{
+    position: absolute;
+    top:180px;
+    right:965px;
+    opacity:0;
+    transform:translateX(-60%);
+    font-family: ivypresto-text, serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.slider-item.swiper-slide-active :where(.slide-subtitle-depilacion){
+    animation: animate_text 0.6s 2.0s linear forwards;
+}
+
+
+.slide-description-diapo3-2{
+    color:white;
+    position:absolute;
+    top:-130px;
+}
+
+
+.slide-subtitle-masajes{
+    position: absolute;
+    top:180px;
+    right:770px;
+    opacity:0;
+    transform:translateX(-60%);
+    font-family: ivypresto-text, serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.slider-item.swiper-slide-active :where(.slide-subtitle-masajes){
+    animation: animate_text 0.6s 2.6s linear forwards;
+}
+
+.slide-subtitle-aparatologia{
+    position: absolute;
+    top:180px;
+    right:515px;
+    opacity:0;
+    transform:translateX(-60%);
+    font-family: ivypresto-text, serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.slider-item.swiper-slide-active :where(.slide-subtitle-aparatologia){
+    animation: animate_text 0.6s 3.2s linear forwards;
+}
+
+.slide-subtitle-unias{
+    position: absolute;
+    font-family: ivypresto-text, serif;
+    font-style: normal;
+    font-weight: 700;
+    top:180px;
+    right:350px;
+    opacity:0;
+    transform:translateX(-60%);
+}
+
+.slider-item.swiper-slide-active :where(.slide-subtitle-unias){
+    animation: animate_text 0.6s 3.8s linear forwards;
+}
+
+
+
+
+.slider-wrapper .slider-item .slide-button{
+    color:white;
+    display:block;
+    opacity:0;
+    width: 0;
+    padding: 13px 0;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap;
+    font-size:0.8rem;
+    font-weight:600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border:2px solid white;
+    transition: 0.5s ease;
+    position:absolute;
+    left:2px;
+    top:120px;
+}
+
+
+
+
+.slider-wrapper .slider-item .slide-button span{
+    opacity:0;
+}
+
+.slider-item.swiper-slide-active .slide-button span{
+    animation: animate_opacity 0.6s 1.5s linear forwards;
+}
+
+.slider-item.swiper-slide-active .slide-button{
+    animation: animate_button 0.6s 1.3s linear forwards;
+}
+
+@keyframes animate_button{
+    100%{
+        opacity:1;
+        width: 275px;
+    }
+}
+
+.slider-wrapper .slider-item .slide-button:hover{
+    color:black;
+    background:white;
+}
+
+
+.slider-wrapper .slider-item .slide-button-wsp{
+    transform: translateX(225px) translateY(-70px);
+    color:white;
+    display:block;
+    opacity:0;
+    width: 0;
+    padding: 13px 0;
+    margin-top:45px;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap;
+    font-size:0.8rem;
+    font-weight:600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border:2px solid white;
+    transition: 0.5s ease;
+}
+
+.slide-button-wsp {
+    position: fixed; /* Fijamos posición para que quede siempre arriba */
+    bottom: 300px;   /* Ajusta según tu diseño */
+    right: 30px;    /* Ajusta según tu diseño */
+    z-index: 9999;  /* Asegúrate que esté encima de todo */
+    opacity: 1;     /* Si deseas, fuerza la visibilidad */
+    transition: all 0.4s ease-in-out;
+}
+
+
+
+
+.slider-wrapper .slider-item .slide-button-wsp span{
+    opacity:0;
+}
+
+.slider-item.swiper-slide-active .slide-button-wsp span{
+    animation: animate_opacity 0.6s 1.5s linear forwards;
+}
+
+.slider-item.swiper-slide-active .slide-button-wsp{
+    animation: animate_button-wsp 0.6s 1.3s linear forwards;
+}
+
+@keyframes animate_button-wsp{
+    100%{
+        opacity:1;
+        width: 90px;
+    }
+}
+
+.slider-wrapper .slider-item .slide-button-wsp:hover{
+    color:black;
+    background:white;
+}
+
+.slider-wrapper .slider-item .slide-button-instagram{
+    transform: translateX(0px) translateY(30px);
+    color:white;
+    display:block;
+    opacity:0;
+    width: 0;
+    padding: 13px 0;
+    margin-top:45px;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap;
+    font-size:0.8rem;
+    font-weight:600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border:2px solid white;
+    transition: 0.5s ease;
+}
+
+.slider-wrapper .slider-item .slide-button-instagram span{
+    opacity:0;
+}
+
+.slider-item.swiper-slide-active .slide-button-instagram span{
+    animation: animate_opacity 0.6s 1.5s linear forwards;
+}
+
+.slider-item.swiper-slide-active .slide-button-instagram{
+    animation: animate_button-wsp 0.6s 1.3s linear forwards;
+}
+
+@keyframes animate_button-wsp{
+    100%{
+        opacity:1;
+        width: 70px;
+    }
+}
+
+.slider-wrapper .slider-item .slide-button-instagram:hover{
+    color:black;
+    background:white;
+}
+
+
+
+
+.slide-title,
+.slide-subtitle,
+.slide-description {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    will-change: transform, opacity;
+}
+
+.slide-title-diapo3,
+.slide-subtitle-diapo3,
+.slide-description-diapo3 {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    will-change: transform, opacity;
+}
+
+.slider-wrapper .slider-item .slide-button-largo{
+    color:black;
+    display:block;
+    opacity:0;
+    width: 0;
+    padding: 13px 0;
+    margin-top:45px;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap;
+    font-size:0.8rem;
+    font-weight:600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border:2px solid black;
+    transition: 0.5s ease;
+}
+
+.slider-wrapper .slider-item .slide-button-largo span{
+    opacity:0;
+}
+
+.slider-item.swiper-slide-active .slide-button-largo span{
+    animation: animate_opacity 0.6s 1.5s linear forwards;
+}
+
+.slider-item.swiper-slide-active .slide-button-largo{
+    animation: animate_button_largo 0.6s 1.3s linear forwards;
+}
+
+@keyframes animate_button_largo{
+    100%{
+        opacity:1;
+        width: 200px;
+    }
+}
+
+.slider-wrapper .slider-item .slide-button-largo:hover{
+    color:white;
+    background:black;
+}
+
+
+
+.slider-container .slider-controls {
+    position: absolute;
+    z-index: 20;
+    bottom: 85px; /* Cambiado de 145px a 10px */
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+
+.slider-controls .slider-pagination {
+    position:relative;
+    display:flex;
+    margin: 0 auto;
+    padding:0 20px;
+    max-width: 1400px;
+    list-style:none;
+    justify-content: space-between;
+}
+
+.slider-pagination .slider-indicator{
+    position:absolute;
+    bottom:0;
+    width:300px;
+    border-bottom:2px solid black;
+    transition:0.4s ease-in-out;
+}
+
+/* Cuando el slider está en las diapositivas 4 o 5 */
+.slider-container.white-indicator .slider-indicator {
+    position:absolute;
+    bottom:0;
+    width:300px;
+    border-bottom:2px solid white;
+    transition:0.4s ease-in-out;
+}
+
+
+
+
+.slider-pagination .slider-tab{
+    color:white;
+    text-align: center;
+    cursor:pointer;
+    font-size:0.85rem;
+    padding:20px 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+.slider-container.white-indicator .slider-pagination .slider-tab {
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 20px 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+
+.slider-navigations button{
+    position:absolute;
+    top:50%;
+    z-index: 20;
+    height:40px;
+    width:40px;
+    border:none;
+    cursor:pointer;
+    color:black;
+    background:white;
+    transform:translateY(-395%);
+    transition:0.4s ease;
+}
+
+.slider-navigations button.swiper-button-disabled{
+    display:none;
+}
+
+.slider-navigations button:hover{
+    background: black;
+    color:white;
+}
+
+/* Estilo para los botones de navegación cuando estamos en diapositivas 4 y 5 */
+.slider-container.white-indicator .slider-navigations button {
+    /* Invertimos los colores: fondo negro, texto blanco */
+    color: white;
+    background: black;
+}
+
+.slider-container.white-indicator .slider-navigations button:hover {
+    /* Al hacer hover se invierten */
+    background: white;
+    color: black;
+}
+
+
+.slider-navigations button#slide-prev{
+    left:20px;
+}
+
+
+.slider-navigations button#slide-next{
+    right:20px;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5em;
+    color: black;
+    position:absolute;
+}
+
+
+
+iframe{
+    position:absolute;
+    top:-150%;
+    left:790%;
+    z-index: 20;
+    height:400px;
+    width:500px;
+    opacity: 0;
+    transform: translateX(110%) translateY(-60%);
+    transition:0.4s ease;
+}
+
+
+@keyframes animate_map{
+    100%{
+        opacity:1;
+    }
+}
+
+iframe{
+    animation: animate_map 1.6s 1.3s linear forwards;
+}
+
+
+.contenedor {
+    position: relative; 
+    width: 100%;
+    height: auto;        
+    margin-top: 10px;    
+}
+
+.imagen1 {
+    position: relative; 
+    left: 600px;           
+    bottom: 200px;         
+    display: block;    
+    width: 100%;      
+    max-width: 800px;   
+    margin: 0 auto;     
+
+}
+
+.slide-description-diapo5{
+    animation: animate_text 0.6s 1s linear forwards;
+}
+
+
+.contenedor-depilacion{
+    position:absolute;
+    
+    bottom:220%;
+    right:47%;
+}
+
+.imagen-depilacion{
+    position:relative;
+    width: 200px;
+
+}
+
+
+.contenedor-masajes{
+    position:absolute;
+    bottom:220%;
+    right:2%;
+}
+
+.imagen-masajes{
+    width: 200px;
+    position:relative;
+}
+
+
+.contenedor-aparatologia{
+    position:absolute;
+    bottom:-450%;
+    right:47%;
+}
+
+.imagen-aparatologia{
+    width: 200px;
+    position:relative;
+}
+
+
+.contenedor-unias{
+    position:absolute;
+    bottom:-450%;
+    right:2%;
+}
+
+.imagen-unas{
+    position:relative;
+    width: 200px;
+}
+
+
+@media (max-width:2536px){
+    .slider-wrapper .slider-item .slide-content,
+    .slider-controls .slider-pagination{
+        width:85%;
+    }
+
+    .map {
+        width: 80%;
+    }
+    .iframe{
+        height:200px;
+    }
+
+    .slider-item .slide-content .slide-subtitle{
+        position:absolute;
+        margin-top:-185px;
+        font-size: 1rem;
+        font-weight: normal;
+        opacity:0;
+        transform:translateY(60%);
+    }
+
+    .slider-item .slide-content .slide-subtitle-diapo3{
+        position:absolute;
+        margin-top:-85px;
+        font-size: 1rem;
+        font-weight: normal;
+        opacity:0;
+        transform:translateY(60%);
+    }
+
+    .title-diapo6{
+        color:white;
+    }
+    
+    .slider-wrapper .slider-item .slide-title{
+        position:absolute;
+    
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top:-45px;
+        opacity:0;
+        transform:translateY(60%);
+    }
+
+    
+.contenedor-diapo6 {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Opcional, centra verticalmente si es necesario */
+    height: 100vh; /* Ajusta la altura si quieres centrar en toda la pantalla */
+}
+
+
+.efectivo {
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Hace que tenga bordes redondeados */
+    border: 2px solid white; /* Borde del círculo */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.tarjetas {
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Hace que tenga bordes redondeados */
+    border: 2px solid white; /* Borde del círculo */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.transferencia {
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Hace que tenga bordes redondeados */
+    border: 2px solid white; /* Borde del círculo */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+    
+    .slider-wrapper .slider-item .slide-title-diapo3{
+        position:absolute;
+        top:-200px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top:-45px;
+        opacity:0;
+        transform:translateY(60%);
+    }
+
+    .slide-title-diapo2{
+        position:relative;
+        font-family: attribute-text, sans-serif;
+        font-style: normal;
+        font-weight: 100;
+        transform:translateY(560%);
+    }
+    
+    .slider-item.swiper-slide-active :where(.slide-title-diapo2){
+        animation: animate_text 0.6s 0.6s linear forwards;
+    }
+
+
+}
+
+@media (max-width:1511px){
+    .slider-wrapper .slider-item .slide-content,
+    .slider-controls .slider-pagination{
+        width:100%;
+    }
+
+    .slider-wrapper .slider-item .slide-content > *{
+        max-width: 66%;
+    }
+
+
+    .slider-navigations button{
+        top:unset;
+        bottom:-15px;
+        background:none;
+    }
+    .slider-navigations button:hover{
+        background:none;
+    }
+    .map {
+        width: 100%;
+        position:relative;
+        
+    }
+    .map iframe {
+        position: fixed;
+        top: 125px;   /* Ajusta según donde quieras que aparezca verticalmente */
+        left: 50%;
+        width: 300px;  /* Define el ancho que necesites */
+        height: 300px; /* Define la altura que necesites */
+        transform: translateX(-180%);
+        z-index: 20;  /* Asegúrate de que esté por encima o debajo según lo requieras */
+        transition: 0.4s ease;
+    }
+    .imagen1 {
+        left: 70%;  /* O el valor que se ajuste a lo que deseas */
+        transform: translateX(-50%);
+        width: 250px;
+        top:50px;
+        max-width: 600px;
+    }
+    .contenedor-depilacion{
+        position:absolute;
+        
+        bottom:10px;
+        right:52%;
+    }
+    
+    .imagen-depilacion{
+        position:relative;
+        width: 150px;
+    
+    }
+    
+    
+    .contenedor-masajes{
+        position:absolute;
+        bottom:-170px;
+        right:52%;
+    }
+    
+    .imagen-masajes{
+        width: 150px;
+        position:relative;
+    }
+    
+    
+    .contenedor-aparatologia{
+        position:absolute;
+        bottom:10px;
+        right:300px;
+    }
+    
+    .imagen-aparatologia{
+        width: 150px;
+        position:relative;
+    }
+    
+    
+    .contenedor-unias{
+        position:absolute;
+        bottom:-170px;
+        right:300px;
+    }
+    
+    .imagen-unas{
+        position:relative;
+        width: 150px;
+    }
+
+
+    .slider-wrapper .slider-item .slide-button{
+        color:white;
+        display:block;
+        opacity:0;
+        width: 0;
+        padding: 13px 0;
+        letter-spacing: 1px;
+        text-align: center;
+        white-space: nowrap;
+        font-size:0.8rem;
+        font-weight:600;
+        text-transform: uppercase;
+        text-decoration: none;
+        border:2px solid white;
+        transition: 0.5s ease;
+        position:absolute;
+        left:-40px;
+        top:300px;
+    }
+
+
+    
+    .slider-wrapper .slider-item .slide-button-largo{
+        color:black ;
+        display:block;
+        opacity:0;
+        width: 0;
+        padding: 7px 0;
+        margin-top:15px;
+        letter-spacing: 0px;
+        text-align: center;
+        white-space: nowrap;
+        font-size:0.8rem;
+        font-weight:600;
+        text-transform: uppercase;
+        text-decoration: none;
+        border:2px solid black;
+        transition: 0.5s ease;
+    }
+
+    .slider-wrapper .slider-item .slide-button-largo span{
+        opacity:0;
+    }
+
+    .slider-item.swiper-slide-active .slide-button-largo span{
+        animation: animate_opacity 0.6s 1.5s linear forwards;
+    }
+
+    .slider-item.swiper-slide-active .slide-button-largo{
+        animation: animate_button_largo 0.6s 1.3s linear forwards;
+    }
+
+    @keyframes animate_button_largo{
+        100%{
+            opacity:1;
+            width: 145px;
+        }
+    }
+
+    .slider-wrapper .slider-item .slide-button-largo:hover{
+        color:white;
+        background:black;
+    }
+
+
+
+    .slider-item .slide-content .slide-subtitle{
+        position:absolute;
+        margin-top:-230px;
+        margin-left:-45px;
+        font-size: 1rem;
+        font-weight: normal;
+        opacity:0;
+        transform:translateY(60%);
+    }
+
+    .slider-item .slide-content .slide-subtitle-diapo3{
+        position:absolute;
+        margin-top:-130px;
+        margin-left:-45px;
+        font-size: 1rem;
+        font-weight: normal;
+        opacity:0;
+        transform:translateY(60%);
+    }
+    
+    .slider-wrapper .slider-item .slide-title{
+        position:absolute;
+        font-size: 1.5rem;
+        font-weight: 700;
+
+        margin-top:-190px;
+        opacity:0;
+        top:200px;
+        left:615px;
+        transform:translateY(60%);
+    }
+    
+    .slider-wrapper .slider-item .slide-title-diapo3{
+        position:absolute;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-left:-33px;
+        margin-top:-90px;
+        opacity:0;
+        transform:translateY(60%);
+    }
+
+
+    
+    .slider-item .slide-content .slide-subtitle-opciones{
+        position:absolute;
+        font-size: 1rem;
+        font-weight: normal;
+        margin-top:5px;
+        opacity:0;
+        transform:translateY(60%);
+        top:-300px;
+        left:170px;
+    }
+    
+    .slider-wrapper .slider-item .slide-title-opciones{
+        position:absolute;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top:5px;
+        opacity:0;
+        transform:translateY(60%);
+        top:-160px;
+        left:157px;
+    }
+
+    .slider-item .slide-content .slide-subtitle-diapo5{
+        position:absolute;
+        font-size: 1rem;
+        font-weight: normal;
+        margin-top:5px;
+        opacity:0;
+        transform:translateY(360%);
+        top:-168px;
+        left:150px;
+    }
+    
+    .slider-wrapper .slider-item .slide-title-diapo5{
+        position:absolute;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top:5px;
+        opacity:0;
+        transform:translateY(360%);
+        top:135px;
+        left:67px;
+    }
+    
+    
+    .slide-description-diapo5{
+        position:absolute;
+        top:205px;
+        left:50px;
+    }
+    
+    .slider-item .slide-content .slide-description{
+        position:absolute;
+        line-height:15px;
+        max-width: 350px; /* Limita el ancho a 150px */
+        word-wrap: break-word; /* Permite que el texto pase a la siguiente línea si es necesario */
+        top:50px;
+        left:505px;
+        opacity:0;
+        transform:translateY(60%);
+    }
+    
+    .slider-item .slide-content .slide-description-diapo3{
+        position:absolute;
+        margin-top:-35px;
+        line-height:15px;
+        opacity:0;
+        transform:translateY(60%);
+    }
+
+    .slider-item .slide-content .slide-subdescription{
+        position:absolute;
+        margin-top:-105px;
+        line-height:25px;
+        opacity:0;
+        transform:translateY(60%);
+        top:405px;
+        left:475px;
+    }
+    
+
+
+    .slider-item.swiper-slide-active .slide-subdescription{
+        animation: animate_text 0.6s 1s linear forwards;
+    }
+
+    .slide-title,
+    .slide-subtitle,
+    .slide-subdescription {
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        -webkit-font-smoothing: antialiased;
+        will-change: transform, opacity;
+    }
+
+    .slide-subtitle-diapo3,
+    .slide-subdescription {
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        -webkit-font-smoothing: antialiased;
+        will-change: transform, opacity;
+    }
+
+
+    .slide-sub
+
+    
+    .contenedor {
+        position: relative;
+        height: auto;
+        margin: 10px auto;
+        right:10px;
+    }
+    
+    .contenedor .imagen1{
+        width:45%;
+    }
+    
+    .slide-title-diapo2{
+        position:relative;
+        top:60px;
+        font-family: attribute-text, sans-serif;
+        font-style: normal;
+        font-weight: 100;
+        transform:translateY(560%);
+    }
+    
+    .slider-item.swiper-slide-active :where(.slide-title-diapo2){
+        animation: animate_text 0.6s 0.6s linear forwards;
+    }
+
+    
+    .slider-item .slide-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Los elementos se posicionan en la parte superior */
+        text-align: center;
+        padding-top: 0; /* O usa el valor mínimo que desees, por ejemplo, 10px */
+        position:absolute;
+        bottom:80px;
+    }
+    
+
+    .adaline-logo-fondo-blanco-2 {
+        position: fixed;    /* Posiciona el elemento de forma fija en la ventana */
+        top: 10px;             /* Alinea al tope de la pantalla */
+        right: 10px;            /* Alinea al extremo derecho */         /* Alinea al extremo derecho */
+        width: 70px;       /* Puedes mantener o ajustar el ancho deseado */
+        max-width: 100%;    /* Para que no sobrepase el ancho de la pantalla */
+        z-index: 1000;      /* Asegura que la imagen esté por encima de otros elementos */
+        transform: none;    /* Elimina transformaciones que alteren su posición */
+      }
+      
+    
+    .adaline-logo-fondo-blanco{
+        width:70px;
+        position:absolute;
+        top:0px;
+        right:0px;
+        transform:translateX(-35%) translateY(-465%);
+    }
+
+
+    
+    .slider-wrapper .slider-item .slide-button-wsp{
+        color:white;
+        display:block;
+        opacity:0;
+        width: 0;
+        padding: 13px 0;
+        margin-top:45px;
+        margin-left:-25px;
+        letter-spacing: 1px;
+        text-align: center;
+        white-space: nowrap;
+        font-size:0.8rem;
+        font-weight:600;
+        text-transform: uppercase;
+        text-decoration: none;
+        border:2px solid white;
+        transform:translateY(70%) translateX(-70%);
+        transition: 0.5s ease;
+    }
+    
+
+    
+
+    .slide-button-wsp {
+        position: fixed; /* Fijamos posición para que quede siempre arriba */
+        top: 300px;   /* Ajusta según tu diseño */
+        right: 10px;    /* Ajusta según tu diseño */
+        z-index: 9999;  /* Asegúrate que esté encima de todo */
+        opacity: 1;     /* Si deseas, fuerza la visibilidad */
+        transition: all 0.4s ease-in-out;
+    }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+
+
+    .contenedor-diapo2{
+        right:40%;
+        top:-2700%;
+    }
+    
+    .adaline-blanco{
+        width:300px;
+        position:absolute;
+        top:100px;
+        left:70px;
+    }
+    
+    .imagen2{
+        width:350px;
+        position:relative;
+        right:-3%;
+        top:130px;
+          display: block;    
+  height: auto;
+    }
+    
+    
+    .slide-subtitle-unias{
+        font-size: 1.0rem;
+        top:290px;
+        right:10px;
+    }
+    
+    .slide-subtitle-aparatologia{
+        font-size: 1.0rem;
+        top:290px;
+        right:70px;
+    }
+    
+    
+    .slide-subtitle-masajes{
+        font-size: 1.0rem;
+        top:290px;
+        right:185px;
+    }
+    
+    .slide-subtitle-depilacion{
+        font-size: 1.0rem;
+        top:290px;
+        right:265px;
+    }
+    
+    .contenedor-imagen-diapo2{
+        position:absolute;
+        top:-180px;
+    }
+    
+    .slider-item .slide-content .slide-description-diapo3{
+        position:absolute;
+        margin-left:-10px;
+        line-height:15px;
+        text-align: left;
+        opacity:0;
+        top:-100px;
+        left:55px;
+        transform:translateY(460%);
+    }
+
+    
+    .slider-wrapper .slider-item .slide-title-diapo3{
+        font-size: 1.5rem;
+        font-weight: 700;
+        opacity:0;
+        top:-100px;
+        left:80px;
+        transform:translateY(160%);
+    }
+
+  
+    .slide-title-2-diapo4{
+        position:fixed;
+        transform: translateX(-50%);
+        left:49.5%;
+        top:230px;
+        font-size: 28px;
+        color:white;
+    }
+    
+    .title-diapo6{
+        color:white;
+        position:absolute;
+        top:120px;
+    }
+
+    .slide-title-diapo4{
+        position:fixed;
+        left:50%;
+        font-size:28px;
+        transform: translateX(-50%);
+        top:150px;
+        color:white;
+    }
+    
+
+    .slide-title-diapo3-2 {
+        position: fixed;
+        left: 50%;
+        top: 30px;
+        transform: translateX(-50%);
+        color: white;
+    }
+    
+    
+    .slide-description-diapo3-2{
+        position:fixed;
+        text-align: center;
+        font-size: 12px;
+        left:50%;
+        top:70px;
+        transform: translateX(-50%);
+        color:white;
+        line-height: 0.9;
+    }
+
+
+    .contenedor-diapo6 {
+        display: flex;
+        flex-direction: column; /* Alinea los elementos en columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        justify-content: center; /* Opcional, centra verticalmente si es necesario */
+        height: 100vh; /* Ajusta la altura si quieres centrar en toda la pantalla */
+    }
+    
+    
+    .efectivo {
+        display: inline-block; /* Para ajustar el tamaño al contenido */
+        padding: 10px 20px; /* Espaciado interno */
+        border-radius: 50px; /* Hace que tenga bordes redondeados */
+        border: 2px solid white; /* Borde del círculo */
+        background-color: black; /* Fondo negro */
+        color: white; /* Texto blanco */
+        text-align: center;
+        margin-top: 10px;
+        position:absolute;
+        top:330px;
+        left:140px;
+        font-weight: bold;
+    }
+    .tarjetas {
+        display: inline-block; /* Para ajustar el tamaño al contenido */
+        padding: 10px 20px; /* Espaciado interno */
+        border-radius: 50px; /* Hace que tenga bordes redondeados */
+        border: 2px solid white; /* Borde del círculo */
+        background-color: black; /* Fondo negro */
+        color: white; /* Texto blanco */
+        text-align: center;
+        margin-top: 10px;
+        position:absolute;
+        top:330px;
+        left:600px;
+        font-weight: bold;
+    }
+    .transferencia {
+        display: inline-block; /* Para ajustar el tamaño al contenido */
+        padding: 10px 20px; /* Espaciado interno */
+        border-radius: 50px; /* Hace que tenga bordes redondeados */
+        border: 2px solid white; /* Borde del círculo */
+        background-color: black; /* Fondo negro */
+        color: white; /* Texto blanco */
+        text-align: center;
+        margin-top: 10px;
+        position:absolute;
+        top:330px;
+        left:1000px;
+        margin-bottom:10px;
+        font-weight: bold;
+    }
+
+    .efectivo-img{
+        position:absolute;
+        left:140px;
+        top:230px;
+    }
+
+    .card-img{
+        position:absolute;
+        left:600px;
+        top:230px;
+    }
+
+    .transferencia-img{
+        position:absolute;
+        left:1020px;
+        top:220px;
+    }
+
+.slide-description-diapo4{
+    position:fixed;
+    text-align: center;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    top:195px;
+    color:white;
+}
+
+
+.slider-wrapper .slider-item .slide-button-instagram {
+    position: fixed;
+    left: 50%;
+    top: 230px;
+    transform: translateX(-60%);
+    /* Cambiar display: block por flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* O ajusta según la animación */
+    width: 0;  /* Recuerda que este ancho se puede animar a un valor mayor */
+    padding: 13px 0;
+    letter-spacing: 1px;
+    /* Puedes eliminar text-align si usas flex */
+    white-space: nowrap;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+    
+.slide-todas-edades{
+    position:fixed;
+    width: 100%;          /* Hace que el elemento ocupe el ancho completo */
+    white-space: nowrap;  /* Evita que el texto se divida en varias líneas */
+    text-align: center;
+    left:50%;
+    top:159px;
+    transform: translateX(-50%);
+    color:black;
+    font-size: 18px;
+}
+
+}
+
+@media (max-width:768px){
+    .slider-wrapper .slider-item .slide-content> *{
+        max-width: 90%;
+    }
+
+
+
+    .slide-title-diapo3{
+        position:absolute;
+        top:45px;
+        left:28%;
+    }
+
+    .slide-subtitle-diapo3{
+        position:absolute;
+        top:45px;
+        left:50%;
+    }
+
+    .slide-description-diapo3{
+        position:absolute;
+        top:-115px;
+        left:13%;
+    }
+
+
+    .map {
+        width: 100%;
+        position:relative;
+        
+    }
+    .map iframe {
+        position: fixed;
+        top: 125px;   /* Ajusta según donde quieras que aparezca verticalmente */
+        left: 50%;
+        width: 100px;  /* Define el ancho que necesites */
+        height: 100px; /* Define la altura que necesites */
+        transform: translateX(-50%);
+        z-index: 20;  /* Asegúrate de que esté por encima o debajo según lo requieras */
+        transition: 0.4s ease;
+    }
+    
+    
+
+    .imagen1 {
+        left: 50%;  /* O el valor que se ajuste a lo que deseas */
+        transform: translateX(-50%);
+        width: 90%;
+        top:120px;
+        max-width: 350px;
+    }
+    
+    
+    .contenedor-depilacion{
+        position:absolute;
+        
+        bottom:10px;
+        right:52%;
+    }
+    
+    .imagen-depilacion{
+        position:relative;
+        width: 150px;
+    
+    }
+    
+    
+    .contenedor-masajes{
+        position:absolute;
+        bottom:-170px;
+        right:52%;
+    }
+    
+    .imagen-masajes{
+        width: 150px;
+        position:relative;
+    }
+    
+    
+    .contenedor-aparatologia{
+        position:absolute;
+        bottom:10px;
+        right:20px;
+    }
+    
+    .imagen-aparatologia{
+        width: 150px;
+        position:relative;
+    }
+    
+    
+    .contenedor-unias{
+        position:absolute;
+        bottom:-170px;
+        right:20px;
+    }
+    
+    .imagen-unas{
+        position:relative;
+        width: 150px;
+    }
+
+
+    .slider-wrapper .slider-item .slide-button{
+        color:white;
+        display:block;
+        opacity:0;
+        width: 0;
+        padding: 13px 0;
+        letter-spacing: 1px;
+        text-align: center;
+        white-space: nowrap;
+        font-size:0.8rem;
+        font-weight:600;
+        text-transform: uppercase;
+        text-decoration: none;
+        border:2px solid white;
+        transition: 0.5s ease;
+        position:absolute;
+        left:-40px;
+        top:300px;
+    }
+
+
+    
+    .slider-wrapper .slider-item .slide-button-largo{
+        color:black ;
+        display:block;
+        opacity:0;
+        width: 0;
+        padding: 7px 0;
+        margin-top:15px;
+        letter-spacing: 0px;
+        text-align: center;
+        white-space: nowrap;
+        font-size:0.8rem;
+        font-weight:600;
+        text-transform: uppercase;
+        text-decoration: none;
+        border:2px solid black;
+        transition: 0.5s ease;
+    }
+
+    .slider-wrapper .slider-item .slide-button-largo span{
+        opacity:0;
+    }
+
+    .slider-item.swiper-slide-active .slide-button-largo span{
+        animation: animate_opacity 0.6s 1.5s linear forwards;
+    }
+
+    .slider-item.swiper-slide-active .slide-button-largo{
+        animation: animate_button_largo 0.6s 1.3s linear forwards;
+    }
+
+    @keyframes animate_button_largo{
+        100%{
+            opacity:1;
+            width: 145px;
+        }
+    }
+
+    .slider-wrapper .slider-item .slide-button-largo:hover{
+        color:white;
+        background:black;
+    }
+
+
+
+    .slider-item .slide-content .slide-subtitle{
+        position:absolute;
+        margin-top:-230px;
+        margin-left:-45px;
+        font-size: 1rem;
+        font-weight: normal;
+        opacity:0;
+        transform:translateY(60%);
+    }
+
+    .slider-item .slide-content .slide-subtitle-diapo3{
+        position:absolute;
+        margin-top:-130px;
+        margin-left:-45px;
+        font-size: 1rem;
+        font-weight: normal;
+        opacity:0;
+        transform:translateY(60%);
+    }
+
+    .efectivo-img{
+        all:unset;
+        width:100px;
+    }
+
+    .card-img{
+        all:unset;
+        width:100px;
+    }
+
+    .transferencia-img{
+        all:unset;
+        width:100px;
+    }
+
+    
+    .slider-wrapper .slider-item .slide-title{
+        position:absolute;
+        left:220px;
+        top:-30px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left:-45px;
+        margin-top:-111px;
+        opacity:0;
+        transform:translateY(60%);
+    }
+    
+    
+    .slider-wrapper .slider-item .slide-title-diapo3{
+        position:absolute;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-left:-33px;
+        margin-top:-90px;
+        opacity:0;
+        transform:translateY(60%);
+    }
+
+
+    
+    .slider-item .slide-content .slide-subtitle-opciones{
+        position:absolute;
+        font-size: 1rem;
+        font-weight: normal;
+        margin-top:5px;
+        opacity:0;
+        transform:translateY(60%);
+        top:-300px;
+        left:170px;
+    }
+    
+    .slider-wrapper .slider-item .slide-title-opciones{
+        position:absolute;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top:5px;
+        opacity:0;
+        transform:translateY(60%);
+        top:-260px;
+        left:157px;
+    }
+
+    .slider-item .slide-content .slide-subtitle-diapo5{
+        position:absolute;
+        font-size: 1rem;
+        font-weight: normal;
+        margin-top:5px;
+        opacity:0;
+        transform:translateY(360%);
+        top:-168px;
+        left:150px;
+    }
+    
+    .slider-wrapper .slider-item .slide-title-diapo5{
+        position:absolute;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top:5px;
+        opacity:0;
+        transform:translateY(360%);
+        top:35px;
+        left:67px;
+    }
+    
+    
+    .slide-description-diapo5{
+        position:absolute;
+        top:105px;
+        left:50px;
+    }
+    
+    .slider-item .slide-content .slide-description{
+        position:absolute;
+        top:-130px;
+        left:40px;
+        line-height:15px;
+        opacity:0;
+        transform:translateY(60%);
+    }
+    
+    .slider-item .slide-content .slide-description-diapo3{
+        position:absolute;
+        margin-top:-35px;
+        line-height:15px;
+        opacity:0;
+        transform:translateY(60%);
+    }
+
+    .slider-item .slide-content .slide-subdescription{
+        position:absolute;
+        margin-top:5px;
+        line-height:25px;
+        opacity:0;
+        transform:translateY(60%);
+        top: 140px;
+        left:90px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: none;
+    }
+    
+    .slider-item.swiper-slide-active .slide-subdescription{
+        animation: animate_text 0.6s 1s linear forwards;
+    }
+
+    .slide-title,
+    .slide-subtitle,
+    .slide-subdescription {
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        -webkit-font-smoothing: antialiased;
+        will-change: transform, opacity;
+    }
+
+    .slide-subtitle-diapo3,
+    .slide-subdescription {
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        -webkit-font-smoothing: antialiased;
+        will-change: transform, opacity;
+    }
+
+    
+    .contenedor {
+        position: relative;
+        height: auto;
+        margin: 10px auto;
+        right:10px;
+    }
+    
+    .contenedor .imagen1{
+        width:95%;
+    }
+    
+    
+    .slider-item .slide-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Los elementos se posicionan en la parte superior */
+        text-align: center;
+        padding-top: 0; /* O usa el valor mínimo que desees, por ejemplo, 10px */
+        position:absolute;
+        bottom:80px;
+    }
+    
+
+    .adaline-logo-fondo-blanco-2 {
+        position: fixed;    /* Posiciona el elemento de forma fija en la ventana */
+        top: 10px;             /* Alinea al tope de la pantalla */
+        right: 10px;            /* Alinea al extremo derecho */         /* Alinea al extremo derecho */
+        width: 70px;       /* Puedes mantener o ajustar el ancho deseado */
+        max-width: 100%;    /* Para que no sobrepase el ancho de la pantalla */
+        z-index: 1000;      /* Asegura que la imagen esté por encima de otros elementos */
+        transform: none;    /* Elimina transformaciones que alteren su posición */
+      }
+      
+    
+    .adaline-logo-fondo-blanco{
+        width:70px;
+        position:absolute;
+        top:0px;
+        right:0px;
+        transform:translateX(-35%) translateY(-465%);
+    }
+
+
+    
+    .slider-wrapper .slider-item .slide-button-wsp{
+        color:white;
+        display:block;
+        opacity:0;
+        width: 0;
+        padding: 13px 0;
+        margin-top:45px;
+        margin-left:-25px;
+        letter-spacing: 1px;
+        text-align: center;
+        white-space: nowrap;
+        font-size:0.8rem;
+        font-weight:600;
+        text-transform: uppercase;
+        text-decoration: none;
+        border:2px solid white;
+        transform:translateY(70%) translateX(-70%);
+        transition: 0.5s ease;
+    }
+    
+    .slide-title-diapo2{
+        position:relative;
+        top:0px;
+        font-family: attribute-text, sans-serif;
+        font-style: normal;
+        font-weight: 100;
+        transform:translateY(560%);
+    }
+    
+    .slider-item.swiper-slide-active :where(.slide-title-diapo2){
+        animation: animate_text 0.6s 0.6s linear forwards;
+    }
+    
+
+    .slide-button-wsp {
+        position: fixed; /* Fijamos posición para que quede siempre arriba */
+        top:490px;
+        bottom:10px;
+        height:60px;
+        right: 10px;    /* Ajusta según tu diseño */
+        z-index: 9999;  /* Asegúrate que esté encima de todo */
+        opacity: 1;     /* Si deseas, fuerza la visibilidad */
+        transition: all 0.4s ease-in-out;
+    }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+
+
+    .contenedor-diapo2{
+        right:10%;
+        top:-2700%;
+    }
+    
+    .adaline-blanco{
+        all:unset;
+        width:300px;
+    }
+    
+    .imagen2{
+        width:350px;
+        position:relative;
+        right:-3%;
+        top:130px;
+          display: block;    
+  height: auto;
+    }
+    
+    
+    .slide-subtitle-unias{
+        font-size: 1.0rem;
+        top:290px;
+        right:10px;
+    }
+    
+    .slide-subtitle-aparatologia{
+        font-size: 1.0rem;
+        top:290px;
+        right:70px;
+    }
+    
+    
+    .slide-subtitle-masajes{
+        font-size: 1.0rem;
+        top:290px;
+        right:185px;
+    }
+    
+    .slide-subtitle-depilacion{
+        font-size: 1.0rem;
+        top:290px;
+        right:265px;
+    }
+    
+    .contenedor-imagen-diapo2{
+        position:absolute;
+        top:-180px;
+    }
+
+    .title-diapo6{
+        color:white;
+    }
+    
+    .slider-item .slide-content .slide-description-diapo3{
+        position:absolute;
+        margin-left:-10px;
+        line-height:15px;
+        text-align: left;
+        opacity:0;
+        top:-100px;
+        left:55px;
+        transform:translateY(460%);
+    }
+
+    
+    .slider-wrapper .slider-item .slide-title-diapo3{
+        font-size: 1.5rem;
+        font-weight: 700;
+        opacity:0;
+        top:-100px;
+        left:80px;
+        transform:translateY(160%);
+    }
+
+  
+    .slide-title-2-diapo4{
+        position:fixed;
+        transform: translateX(-50%);
+        left:50%;
+        top:330px;
+        margin-left:5px;
+        color:white;
+    }
+    
+    .slide-title-diapo4{
+        position:fixed;
+        left:50%;
+        transform: translateX(-50%);
+        top:250px;
+        color:white;
+    }
+    
+
+    .slide-title-diapo3-2 {
+        position: fixed;
+        left: 50%;
+        top: 30px;
+        transform: translateX(-50%);
+        color: white;
+    }
+    
+    
+    .slide-description-diapo3-2{
+        position:fixed;
+        text-align: center;
+        font-size: 12px;
+        left:50%;
+        top:70px;
+        transform: translateX(-50%);
+        color:white;
+        line-height: 0.9;
+    }
+
+
+.slide-description-diapo4{
+    position:fixed;
+    text-align: center;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    top:295px;
+    color:white;
+}
+
+
+.contenedor-diapo6 {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Opcional, centra verticalmente si es necesario */
+    height: 100vh; /* Ajusta la altura si quieres centrar en toda la pantalla */
+}
+
+
+.efectivo {
+    all:unset;
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Hace que tenga bordes redondeados */
+    border: 2px solid white; /* Borde del círculo */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.tarjetas {
+    all:unset;
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Hace que tenga bordes redondeados */
+    border: 2px solid white; /* Borde del círculo */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.transferencia {
+    all:unset;
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Hace que tenga bordes redondeados */
+    border: 2px solid white; /* Borde del círculo */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+
+
+.slider-wrapper .slider-item .slide-button-instagram {
+    position: fixed;
+    left: 50%;
+    top: 330px;
+    transform: translateX(-60%);
+    /* Cambiar display: block por flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* O ajusta según la animación */
+    width: 0;  /* Recuerda que este ancho se puede animar a un valor mayor */
+    padding: 13px 0;
+    letter-spacing: 1px;
+    /* Puedes eliminar text-align si usas flex */
+    white-space: nowrap;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+    
+.slide-todas-edades{
+    position:fixed;
+    width: 100%;          /* Hace que el elemento ocupe el ancho completo */
+    white-space: nowrap;  /* Evita que el texto se divida en varias líneas */
+    text-align: center;
+    left:50%;
+    top:305px;
+    transform: translateX(-50%);
+    color:black;
+    font-size: 18px;
+}
+
+   
+}
+
+
+
+@media (max-width:400px){
+    .slider-wrapper .slider-item .slide-content> *{
+        max-width: 100%;
+    }
+    .map {
+        width: 100%;
+        position:relative;
+        
+    }
+    .map iframe {
+        position: fixed;
+        top: 170px;   /* Ajusta según donde quieras que aparezca verticalmente */
+        left: 50%;
+        width: 100px;  /* Define el ancho que necesites */
+        height: 100px; /* Define la altura que necesites */
+        transform: translateX(-50%);
+        z-index: 20;  /* Asegúrate de que esté por encima o debajo según lo requieras */
+        transition: 0.4s ease;
+    }
+    
+
+
+    .slide-content{
+        position:absolute;
+    }
+
+
+    .slide-subtitle-diapo3,
+    .slide-subdescription {
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        -webkit-font-smoothing: antialiased;
+        will-change: transform, opacity;
+    }
+
+
+    
+
+
+
+
+    .slide-subtitle-diapo3{
+        position:absolute;
+        top:45px;
+        left:50%;
+    }
+
+    .slide-description-diapo3{
+        position:absolute;
+        top:-135px;
+        left:13%;
+    }
+
+    
+.slider-wrapper .slider-item .slide-button-largo{
+    color:black ;
+    display:block;
+    opacity:0;
+    width: 0;
+    padding: 7px 0;
+    margin-top:15px;
+    letter-spacing: 0px;
+    text-align: center;
+    white-space: nowrap;
+    font-size:0.8rem;
+    font-weight:600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border:2px solid black;
+    transition: 0.5s ease;
+}
+
+.slider-wrapper .slider-item .slide-button-largo span{
+    opacity:0;
+}
+
+.slider-item.swiper-slide-active .slide-button-largo span{
+    animation: animate_opacity 0.6s 1.5s linear forwards;
+}
+
+.slider-item.swiper-slide-active .slide-button-largo{
+    animation: animate_button_largo 0.6s 1.3s linear forwards;
+}
+
+@keyframes animate_button_largo{
+    100%{
+        opacity:1;
+        width: 150px;
+    }
+}
+
+.slider-wrapper .slider-item .slide-button-largo:hover{
+    color:white;
+    background:black;
+}
+
+.imagen1 {
+    left: 50%;  /* O el valor que se ajuste a lo que deseas */
+    transform: translateX(-50%);
+    width: 90%;
+    top:120px;
+    max-width: 350px;
+}
+
+.slider-item .slide-content .slide-subdescription{
+    position:absolute;
+    margin-top:5px;
+    line-height:25px;
+    opacity:0;
+    transform:translateY(60%);
+    top: 140px;
+    left:90px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: none;
+}
+
+.slider-item.swiper-slide-active .slide-subdescription{
+    animation: animate_text 0.6s 1s linear forwards;
+}
+
+.slide-title,
+.slide-subtitle,
+.slide-subdescription {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    will-change: transform, opacity;
+}
+
+.slide-subtitle-diapo3,
+.slide-subdescription {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    will-change: transform, opacity;
+}
+
+.contenedor-depilacion{
+    position:absolute;
+    
+    bottom:100px;
+    right:58%;
+}
+
+.imagen-depilacion{
+    position:relative;
+    width: 150px;
+
+}
+
+
+.contenedor-masajes{
+    position:absolute;
+    bottom:-100px;
+    right:58%;
+}
+
+.imagen-masajes{
+    width: 150px;
+    position:relative;
+}
+
+
+.contenedor-aparatologia{
+    position:absolute;
+    bottom:100px;
+    right:20px;
+}
+
+.imagen-aparatologia{
+    width: 150px;
+    position:relative;
+}
+
+
+.contenedor-unias{
+    position:absolute;
+    bottom:-100px;
+    right:20px;
+}
+
+.imagen-unas{
+    position:relative;
+    width: 150px;
+}
+
+.slider-item .slide-content .slide-subtitle{
+    position:absolute;
+    margin-top:-150px;
+    margin-left:-44px;
+    font-size: 1rem;
+    font-weight: normal;
+    opacity:0;
+    transform:translateY(60%);
+}
+
+.slider-item .slide-content .slide-subtitle-diapo3{
+    position:absolute;
+    margin-top:-35px;
+    margin-left:-50px;
+    font-size: 1rem;
+    font-weight: normal;
+    opacity:0;
+    transform:translateY(60%);
+}
+
+.slider-wrapper .slider-item .slide-title{
+    position:absolute;
+    left:200px;
+    top:0px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left:-45px;
+    margin-top:-111px;
+    opacity:0;
+    transform:translateY(60%);
+}
+
+
+.slider-item .slide-content .slide-subtitle-opciones{
+    position:absolute;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-top:5px;
+    opacity:0;
+    transform:translateY(60%);
+    top:-168px;
+    left:150px;
+}
+
+.slider-wrapper .slider-item .slide-title-opciones{
+    position:absolute;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top:5px;
+    opacity:0;
+    transform:translateY(60%);
+    top:-145px;
+    left:137px;
+}
+
+.title-diapo6{
+    margin-bottom:50px;
+    color:white;
+}
+
+.slider-item .slide-content .slide-subtitle-diapo5{
+    position:absolute;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-top:5px;
+    opacity:0;
+    transform:translateY(60%);
+    top:-168px;
+    left:150px;
+}
+
+.slider-wrapper .slider-item .slide-title-diapo5{
+    position:absolute;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top:5px;
+    opacity:0;
+    transform:translateY(60%);
+    top:175px;
+    left:67px;
+}
+
+
+.slide-description-diapo5{
+    position:absolute;
+    top:225px;
+    left:50px;
+}
+
+
+.slider-item .slide-content .slide-description{
+    position:absolute;
+    top:-97px;
+    left:40px;
+    line-height:15px;
+    opacity:0;
+    transform:translateY(60%);
+}
+
+.slider-item .slide-content .slide-description-diapo3{
+    position:absolute;
+    margin-left:-10px;
+    line-height:15px;
+    opacity:0;
+    top:-100px;
+    right:40px;
+    transform:translateY(460%);
+}
+
+
+.slide-title-diapo2{
+    position:relative;
+    top:0px;
+    font-family: attribute-text, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    transform:translateY(560%);
+}
+
+.slider-item.swiper-slide-active :where(.slide-title-diapo2){
+    animation: animate_text 0.6s 0.6s linear forwards;
+}
+
+.contenedor {
+    position: relative;
+    height: auto;
+    margin: 10px auto;
+    right:10px;
+}
+
+.contenedor .imagen1{
+    width:95%;
+}
+
+
+.slider-item .slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Los elementos se posicionan en la parte superior */
+    text-align: center;
+    padding-top: 0; /* O usa el valor mínimo que desees, por ejemplo, 10px */
+    position:absolute;
+    bottom:80px;
+}
+
+.contenedor-imagenes-opciones {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: -100px; 
+    margin-top:160px;
+    margin-right: -25px;
+}
+
+.slider-wrapper .slider-item .slide-button-wsp{
+    color:white;
+    display:block;
+    opacity:0;
+    width: 0;
+    padding: 13px 0;
+    margin-top:45px;
+    margin-left:-25px;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap;
+    font-size:0.8rem;
+    font-weight:600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border:2px solid white;
+    transform:translateY(370%) translateX(-100%);
+    transition: 0.5s ease;
+}
+
+
+.contenedor-diapo6 {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Opcional, centra verticalmente si es necesario */
+    height: 100vh; /* Ajusta la altura si quieres centrar en toda la pantalla */
+}
+
+
+.efectivo {
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Hace que tenga bordes redondeados */
+    border: 2px solid white; /* Borde del círculo */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    margin-top: 60px;
+    font-weight: bold;
+}
+.tarjetas {
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Hace que tenga bordes redondeados */
+    border: 2px solid white; /* Borde del círculo */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.transferencia {
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Hace que tenga bordes redondeados */
+    border: 2px solid white; /* Borde del círculo */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+
+
+.slide-button-wsp {
+    position: fixed; /* Fijamos posición para que quede siempre arriba */
+    bottom: 120px;   /* Ajusta según tu diseño */
+    right: 10px;    /* Ajusta según tu diseño */
+    z-index: 9999;  /* Asegúrate que esté encima de todo */
+    opacity: 1;     /* Si deseas, fuerza la visibilidad */
+    transition: all 0.4s ease-in-out;
+}
+
+.img-wsp{
+    width:60px;
+}
+
+
+.slider-wrapper .slider-item .slide-button{
+    color:white;
+    display:block;
+    opacity:0;
+    width: 0;
+    padding: 13px 0;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap;
+    font-size:0.8rem;
+    font-weight:600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border:2px solid white;
+    transition: 0.5s ease;
+    position:absolute;
+    left:-40px;
+    top:300px;
+}
+
+
+.first-word {
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+
+.contenedor-diapo2{
+    right:10%;
+    top:-2400%;
+}
+
+.adaline-blanco{
+    all:unset;
+    width:300px;
+}
+
+.imagen2{
+    width:350px;
+    position:relative;
+    right:-3%;
+    top:180px;
+}
+
+
+.slide-subtitle-unias{
+    font-size: 1.0rem;
+    top:335px;
+    right:10px;
+}
+
+.slide-subtitle-aparatologia{
+    font-size: 1.0rem;
+    top:335px;
+    right:70px;
+}
+
+
+.slide-subtitle-masajes{
+    font-size: 1.0rem;
+    top:335px;
+    right:185px;
+}
+
+.slide-subtitle-depilacion{
+    font-size: 1.0rem;
+    top:335px;
+    right:265px;
+}
+
+.contenedor-imagen-diapo2{
+    position:absolute;
+    top:-180px;
+}
+
+
+.slide-title-2-diapo4{
+    position:fixed;
+    text-align: center;
+    transform: translateX(-50%);
+    left:48.5%;
+    top:380px;
+    color:white;
+    font-size: 1.2rem;
+}
+
+.slide-title-diapo4{
+    position:fixed;
+    text-align: center;
+    left:50%;
+    transform: translateX(-50%);
+    top:300px;
+    color:white;
+    font-size: 1.2rem;
+}
+
+.slide-title-diapo3-2 {
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    top: 80px;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+.slide-description-diapo3-2{
+    position:fixed;
+    text-align: center;
+    font-size: 12px;
+    left:50%;
+    top:110px;
+    transform: translateX(-50%);
+    color:white;
+    line-height: 0.8;
+}
+
+
+.slide-description-diapo4{
+    position:fixed;
+    text-align: center;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    top:330px;
+    color:white;
+}
+
+.slider-wrapper .slider-item .slide-button-instagram {
+    position: fixed;
+    left: 49%;
+    top: 380px;
+    transform: translateX(-50%);
+    /* Cambiar display: block por flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* O ajusta según la animación */
+    width: 0;  /* Recuerda que este ancho se puede animar a un valor mayor */
+    padding: 13px 0;
+    letter-spacing: 1px;
+    /* Puedes eliminar text-align si usas flex */
+    white-space: nowrap;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+
+
+.adaline-logo-fondo-blanco{
+    width:35px;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transform:translateX(-35%) translateY(-1000%);
+}
+.adaline-logo-fondo-blanco-2 {
+    position: fixed;    /* Posiciona el elemento de forma fija en la ventana */
+    top: 10px;             /* Alinea al tope de la pantalla */
+    right: 10px;            /* Alinea al extremo derecho */          /* Alinea al extremo derecho */
+    width: 70px;        /* Puedes mantener o ajustar el ancho deseado */
+    max-width: 100%;    /* Para que no sobrepase el ancho de la pantalla */
+    z-index: 1000;      /* Asegura que la imagen esté por encima de otros elementos */
+    transform: none;    /* Elimina transformaciones que alteren su posición */
+  }
+
+  .slide-todas-edades{
+    position:fixed;
+    width: 100%;          /* Hace que el elemento ocupe el ancho completo */
+    white-space: nowrap;  /* Evita que el texto se divida en varias líneas */
+    text-align: center;
+    left:50%;
+    top:265px;
+    transform: translateX(-50%);
+    color:black;
+    font-size: 18px;
+}
+
+  
+  
+}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaline</title>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" as="style" onload="this.rel='stylesheet'">   
+  <link rel="stylesheet" href="style-masajes.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider-wrapper swiper-wrapper">
+      <div class="slider-item-masajes swiper-slide">
+        <div class="slide-content">
+          <h2 class="slide-title">Beneficios del Masaje</h2>
+          <p class="slide-description">- Favorece la circulación de la sangre.</p>
+          <p class="slide-description">- Ayuda a reducir el estrés.</p>
+          <p class="slide-description">- Ayuda a los músculos a mantener su flexibilidad.</p>
+          <p class="slide-description">- Ayuda a liberar las endorfinas produciendo bienestar y combatiendo el dolor.</p>
+          <p class="slide-description">- Ayuda a disminuir los depósitos de grasa (acompañado de dieta equilibrada y deporte).</p>
+          <p class="slide-description">- Mejora la condición de la piel.</p>
+          <a href="index.html?startSlide=2" class="slide-button">Volver Al Menú Principal</a>
+        </div>
+      </div>
+      <div class="slider-item-masajes swiper-slide">
+        <div class="slide-content">
+          <h2 class="slide-title">- Variedad en Masajes</h2>
+          <p class="slide-description">- Descontracturante</p>
+          <p class="slide-description">- Reflexología</p>
+          <p class="slide-description">- Modelador</p>
+          <p class="slide-description">- Reductor</p>
+          <p class="slide-description">- Drenaje Linfático Manual</p>
+          <a href="index.html?startSlide=2" class="slide-button">Volver Al Menú Principal</a>
+        </div>
+      </div>
+      <div class="slider-item-masajes swiper-slide">
+        <div class="slide-content">
+          <h2 class="slide-title">Exfoliación Corporal</h2>
+          <p class="slide-description">¿Que es?</p>
+          <p class="slide-description">
+            Limpia profundamente la piel, retirando las células muertas de nuestro cuerpo que el baño diario no retira. Se puede realizar en todo el cuerpo o en una zona específica. Algunos de sus beneficios son:
+          </p>
+          <p class="slide-description">- Aspecto mas uniforme, suave y libre de impurezas.</p>
+          <p class="slide-description">- Ayuda a evitar pelos encarnados y favorece su eliminación.</p>
+          <p class="slide-description">- Realza el bronceado y es importante hacerlo antes de usar productos como autobronceante, solarium, sol.</p>
+          <a href="index.html?startSlide=2" class="slide-button">Volver Al Menú Principal</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agregamos Paginacion -->
+    <div class="slider-controls">
+      <div class="slider-pagination">
+        <div class="slider-indicator"></div>
+        <li class="slider-tab">
+          <div class="logo"></div>
+        </li>
+        <li class="slider-tab">
+          <div class="logo"></div>
+        </li>
+        <li class="slider-tab">
+          <div class="logo"></div>
+        </li>
+      </div>
+    </div>
+
+    <!-- Agregamos Botones de Navegacion -->
+    <div class="slider-navigations">
+      <button id="slide-prev" class="material-symbols-rounded">
+        arrow_left_alt
+      </button>
+      <button id="slide-next" class="material-symbols-rounded">
+        arrow_right_alt
+      </button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script2.js"></script>
+</body>
+</html>

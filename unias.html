@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaline</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" as="style" onload="this.rel='stylesheet'">   
+    <link rel="stylesheet" href="style-unias.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+
+</head>
+<body>
+    <div class="slider-container">
+        
+        <div class="slider-wrapper swiper-wrapper">
+            <div class="slider-item-masajes swiper-slide">
+                <div class="slide-content">
+                    <h2 class="slide-title">Manicura</h2>
+                    <p class="slide-description">El concepto de “manicura semipermanente” suele hacer referencia a manicura con esmaltado de larga duración,
+                         tanto si es en uñas artificiales de gel o acrílicas como si es aplicado directamente sobre la uña natural.         
+                    </p>
+                    <div class="contenedor">
+                        <img class="imagen1" src="images/unias1.webp" alt="Logo de Whatsapp" width="200">
+                        <img class="imagen2" src="images/unias2.webp" alt="Logo de Whatsapp" width="200">
+                    </div>
+                    <a href="index.html?startSlide=2" class="slide-button">Volver Al Menú Principal</a>
+                </div>
+            </div>
+
+            <div class="slider-item-masajes swiper-slide">
+                <div class="slide-content">
+                    <h2 class="slide-title">Manicura Semipermanente</h2>
+                    <p class="slide-description">Se trata de una manicura ideal para no estar todo el día pendiente de que se nos salte el esmalte
+                         por cualquier tipo de manipulación o recibir golpes al hacer deporte por ejemplo, o mantener las manos en remojo mucho,
+                         en la paya, al hacer natación, etc.; de que pierda el brillo, y no tener que mantenerla cada pocos días.</p>
+                    <div class="contenedor">
+                        <img class="imagen6" src="images/unias3.webp" alt="Logo de Whatsapp" width="200">
+                        <img class="imagen7" src="images/unias4.webp" alt="Logo de Whatsapp" width="200">
+                    </div>
+                    <a href="index.html?startSlide=2" class="slide-button">Volver Al Menú Principal</a>
+                </div>
+            </div>
+
+
+
+        <!-- Agregamos Paginacion -->
+        <div class="slider-controls">
+            <div class="slider-pagination">
+                <div class="slider-indicator"></div>
+                <li class="slider-tab">
+                    <div class="logo"></div>
+                </li>
+                <li class="slider-tab">
+                    <div class="logo"></div>
+                </li>
+            </div>
+        </div>
+
+
+
+        <!-- Agregamos Botones de Navegacion -->
+        <div class="slider-navigations">
+            <button id="slide-prev" class="material-symbols-rounded">
+                arrow_left_alt
+            </button>
+            <button id="slide-next" class="material-symbols-rounded">arrow_right_alt</button>
+         </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
