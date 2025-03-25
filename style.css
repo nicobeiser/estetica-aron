@@ -2796,7 +2796,8 @@ iframe{
 
 .slide-button-wsp {
     position: fixed; /* Fijamos posición para que quede siempre arriba */
-    bottom: 120px;   /* Ajusta según tu diseño */
+    bottom: 180px;   /* Ajusta según tu diseño */
+    top:480px;
     right: 10px;    /* Ajusta según tu diseño */
     z-index: 9999;  /* Asegúrate que esté encima de todo */
     opacity: 1;     /* Si deseas, fuerza la visibilidad */
